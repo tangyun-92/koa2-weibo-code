@@ -16,4 +16,12 @@ router.get('/json', async (ctx, next) => {
   }
 })
 
+router.get('/profile/:username', async (ctx, next) => {
+  const { username } = ctx.params
+  ctx.body = {
+    title: 'this is profile page',
+    username,
+  }
+})
+
 module.exports = router
